@@ -1,66 +1,32 @@
-## Foundry
+# Initial Commit – Foundry Fund Me Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Overview
 
-Foundry consists of:
+This project is a **Foundry-based implementation** of the _Fund Me_ smart contract, inspired by Patrick Collins’ course.  
+It provides a decentralized funding mechanism where users can send ETH, and the contract owner can withdraw funds securely.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Features
 
-## Documentation
+- Solidity smart contract (`FundMe.sol`) for decentralized funding.
+- Deployment script (`DeployFundMe.s.sol`) using Foundry scripting.
+- Interaction scripts (`Interactions.s.sol`) for funding and withdrawing.
+- Unit tests and integration tests to validate functionality (`FundMeTestIntegration.t.sol`).
+- Gas-efficient implementation using Solidity 0.8.30.
 
-https://book.getfoundry.sh/
+## Tech Stack
 
-## Usage
+- **Solidity (0.8.30)**
+- **Foundry (Forge, Cast, Anvil)**
+- **Chainlink Price Feeds** (for USD conversions)
+- **Hardhat/Remix inspiration** adapted to Foundry ecosystem
 
-### Build
+## Folder Structure
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+├── src
+│ └── FundMe.sol
+├── script
+│ ├── DeployFundMe.s.sol
+│ └── Interactions.s.sol
+├── test
+│ ├── FundMeTest.t.sol
+│ └── FundMeTestIntegration.t.sol
